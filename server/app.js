@@ -25,7 +25,7 @@ app.listen(PORT, () => {
 // scrapeDynamicWebpage();
 scrapeStaticWebpage();
 scrapeDynamicWebpage();
-const data = require("./data/itemsData.json");
+const data = require("./data/telemartData.json");
 app.get("/items", function (req, res) {
  res.json(data);
 });
