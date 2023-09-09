@@ -7,7 +7,7 @@ const fs = require("fs");
 
 const scrapeDynamicWebpage = require("./scrapers/dynamincSiteScraper");
 const scrapeStaticWebpage = require("./scrapers/staticSiteScraper");
-// const data = require("./data/itemsData.json");
+const data = require("./data/itemsData.json");
 
 var folder = "./data";
 
