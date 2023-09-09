@@ -7,7 +7,7 @@ const fs = require("fs");
 
 const scrapeDynamicWebpage = require("./scrapers/dynamincSiteScraper");
 const scrapeStaticWebpage = require("./scrapers/staticSiteScraper");
-const data = require("./data/itemsData.json");
+
 
 var folder = "./data";
 
@@ -18,11 +18,6 @@ if (!fs.existsSync(folder)) {
 app.get("/", function (req, res) {
  res.send("Happy web scraping");
 });
-
-app.get("/items", function (req, res) {
- res.json(data);
-});
-
 app.listen(PORT, () => {
  console.log("Server running on port " + PORT);
 });
@@ -30,3 +25,7 @@ app.listen(PORT, () => {
 // scrapeDynamicWebpage();
 scrapeStaticWebpage();
 scrapeDynamicWebpage();
+const data = require("./data/itemsData.json");
+app.get("/items", function (req, res) {
+ res.json(data);
+});
